@@ -7,16 +7,16 @@
 			<section class="article-content">
 				<h1 class="article-h1">{{ post.title }}</h1>
 				<a href="{{ post.link }}">{{ _e('edit') }}</a>
-				<p class="blog-author">
+				{# <p class="blog-author">
 					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
-				</p>
+				</p> #}
 				<div class="article-body">
 					{{post.content}}
 				</div>
 			</section>
 
 			<!-- comment box -->
-			<section class="comment-box">
+			{# <section class="comment-box">
 				<!-- comments -->
 				<div class="comments">
 				    {% if post.comments %}
@@ -33,7 +33,7 @@
 				    <!-- comment form -->
 				    {% include "comment-form.twig" %}
 				{% endif %}
-			</section>
+			</section> #}
 		</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}

@@ -12,9 +12,23 @@
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
+					<div class="custom-header">
+								<div class="custom-header-media">
+								<div id="wp-custom-header" class="wp-custom-header">
+									<img src="{{theme.path}}/images/biz-composite-houses-banner-website-musings.jpg"  alt="leoraw houses banner for website">
+								</div>
+						</div>
+						<div class="site-branding">
+						<div class="wrap">
+						<h1 class="hdr-logo" role="banner">
+							<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+						</h1>
+						<h2 class="site-branding-text m-0" role="banner">
+							{{site.name}}
+						</h2>
+						<p class="site-description">{{site.description}}</p></div></div>
+					</div>
+					
 					<nav id="nav-main" class="nav-main" role="navigation">
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
