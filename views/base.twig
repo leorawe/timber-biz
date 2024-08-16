@@ -11,27 +11,47 @@
 		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
 		<header class="header" >
 			{% block header %}
+			<div class="header-image-container">
+				<img src="{{theme.path}}/images/biz-composite-houses-banner-website-musings.jpg"  alt="leoraw houses banner for website">
+			</div>
+			<div class="header-container">
 				<div class="wrapper">
-					<div class="header-image-container">
-						<img src="{{theme.path}}/images/biz-composite-houses-banner-website-musings.jpg"  alt="leoraw houses banner for website">
-					</div>
-					<div class="site-wrap">
-						<div class="site-branding">
-							<h2 class="site-branding-text m-0" role="banner">
-								{{site.name}}
-							</h2>
-							<p class="site-description">{{site.description}}</p>
+					<div class="inner-wrapper">
+							<div class="site-branding">
+								{% if page == 'home' %}
+								<h1 class="site-branding-text m-0" role="banner">
+									{{site.name}}
+								</h1>
+								{% else %}
+								<h2 class="site-branding-text m-0" role="banner">
+									<a class="site-branding-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+								</h2>
+								{% endif %}
+								<p class="site-description">{{site.description}}</p>
+							</div>
 						</div>
-						<nav id="nav-main" class="nav-main" role="navigation">
-							{% include "menu.twig" with {'items': menu.get_items} %}
-						</nav><!-- #nav -->
-					</div>
+				</div><!-- #wrapper -->
+				<div class="header-container nav-container">
+						<div class="wrapper">
+							<div class="inner-wrapper">
+							{# <button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
+									<svg class="icon icon-bars" aria-hidden="true" role="img"> <use href="#icon-bars" xlink:href="#icon-bars"></use> </svg><svg class="icon icon-close" aria-hidden="true" role="img"> <use href="#icon-close" xlink:href="#icon-close"></use> </svg>Menu 
+								</button> #}
+								<nav id="nav-main" class="nav-main" role="navigation">
+									{% include "menu.twig" with {'items': menu.get_items} %}
+								</nav><!-- #nav -->
+								</div>
+						</div>
 				</div>
+			</div><!-- #header-container -->
 			{% endblock %}
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
+		<section id="content" role="main" class="wrapper">
+		 <div class="inner-wrapper">
+		{% if page == 'home' %}{% else %}
 			{% if title %}<h1>{{title}}</h1>{% endif %}
+		{% endif %}
 			<div class="wrapper">
 				{% block content %}
 					Sorry, no content
@@ -42,10 +62,11 @@
 					{{sidebar}}
 				</aside>
 			{% endif %}
+			</div>
 		</section>
 
 		{% block footer %}
-			<footer id="footer" class="content-wrapper">
+			<footer id="footer" class="wrapper">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
