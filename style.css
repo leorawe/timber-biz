@@ -1,5 +1,48 @@
 /*
  * Theme Name: Timber Biz 2.x Starter Theme
  * Description: Starter Theme to use with Timber
- * Author: Upstatement and YOU!
+ * Author: Upstatement and Leora Wenger
 */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  width: 300px;
+}
+
+.header {
+  display: block;
+  width: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header .header-image-container {
+  margin: 0 5px;
+}
+
+.header img {
+  width: 100%;
+  max-width: 1500px;
+  min-width: 100%;
+}
+
+.site-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* navigation */
+.nav-main ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
