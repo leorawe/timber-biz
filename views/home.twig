@@ -8,6 +8,8 @@
         {% endfor %}
         </div>
         {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
-        <div class="sidebar">SIDEBAR</div>
+        <aside class="sidebar">
+            <ul>{{ sidebar_1 }}</ul>
+		</aside>
     </div><!-- /home-wrapper -->
 {% endblock %}

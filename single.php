@@ -10,6 +10,7 @@
  */
 
 $context         = Timber::context();
+$context['sidebar_1'] = Timber::get_widgets('sidebar-1');
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
 

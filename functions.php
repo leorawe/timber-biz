@@ -22,4 +22,37 @@ function timber_biz_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'timber_biz_enqueue_scripts' );
 
+/**
+ * Register Menus
+ */
+add_action('after_setup_theme', function () {
+    register_nav_menus([
+        'primary' => 'Primary Menu',
+        'footer' => 'Footer Menu',
+    ]);
+});
+
+
+/**
+	 * Register widget area.
+	 *
+	 * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+	 */
+	function timber_biz_widgets_init() {
+		register_sidebar( array(
+			'name'          => __( 'Timber Biz Sidebar', 'timber_biz' ),
+			'id'            => 'sidebar-1',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+		register_sidebar( array(
+			'name'          => __( 'Timber Biz Footer Widgets', 'timber_biz' ),
+			'id'            => 'footer-widgets',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+	}
+
+	add_action( 'widgets_init', 'timber_biz_widgets_init' );
+
 new StarterSite();

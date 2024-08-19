@@ -15,10 +15,12 @@
 
 $context          = Timber::context();
 $context['posts'] = Timber::get_posts();
-// $context['foo']   = '';
 $context['page'] = 'home';
+$context['sidebar_1'] = Timber::get_widgets('sidebar-1');
+$context['footer_widgets'] = Timber::get_widgets('footer-widgets');
+// $menu = Timber::get_menu('primary');
 $templates        = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
 }
-Timber::render( $templates, $context );
+Timber::render( $templates, $context);

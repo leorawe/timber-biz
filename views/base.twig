@@ -15,7 +15,7 @@
 				<img src="{{theme.path}}/images/biz-composite-houses-banner-website-musings.jpg"  alt="leoraw houses banner for website">
 			</div>
 			<div class="header-container">
-				<div class="wrapper">
+				<div class="wrapper header-wrapper">
 					<div class="inner-wrapper">
 							<div class="site-branding">
 								{% if page == 'home' %}
@@ -32,7 +32,7 @@
 						</div>
 				</div><!-- #wrapper -->
 				<div class="header-container nav-container">
-						<div class="wrapper">
+						<div class="wrapper header-wrapper">
 							<div class="inner-wrapper nav-wrap">
 								<div class="mobile-button-wrapper">
 									<button type="button" class="button navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu" aria-controls="top-menu" aria-expanded="false" id="leoraw-button">
@@ -49,6 +49,7 @@
 								</div>
 								<nav id="nav-main" class="nav-main" role="navigation">
 									{% include "menu.twig" with {'items': menu.get_items} %}
+									{% include "menu.twig" with {'items': primary_menu.get_items} %}
 								</nav><!-- #nav -->
 								</div>
 						</div>
@@ -67,11 +68,11 @@
 					Sorry, no content
 				{% endblock %}
 			</div>
-			{% if sidebar %}
+			{# {% if sidebar %}
 				<aside class="layout-sidebar">
 					{{sidebar}}
 				</aside>
-			{% endif %}
+			{% endif %} #}
 			</div>
 		</section>
 
