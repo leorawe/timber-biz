@@ -4,10 +4,17 @@
 {% block content %}
   {# see `base.twig:27` for where this block's content will be inserted #}
   <div class="content-wrapper">
-    {% for post in posts %}
-      {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-    {% endfor %}
+    <div class="inner-wrapper">
+      {% for post in posts %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+      {% endfor %}
 
-    {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+      {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+    
+    </div>
+  		<aside class="sidebar">
+			  <ul>{{sidebar_1}}</ul>
+		  </aside>
   </div>
 {% endblock %}
+
