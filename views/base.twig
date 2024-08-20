@@ -71,9 +71,11 @@
 		</section>
 
 		{% block footer %}
-			<footer id="footer" class="wrapper">
-				<div class="inner-wrapper">
+			<footer id="footer">
+				<div class="wrapper">
+					<div class="inner-wrapper">
 				{% include 'footer.twig' %}
+					</div>
 				</div>
 			</footer>
 			{{ function('wp_footer') }}

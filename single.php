@@ -13,6 +13,7 @@ $context         = Timber::context();
 $context['sidebar_1'] = Timber::get_widgets('sidebar-1');
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
+$context['footer_widgets'] = Timber::get_widgets('footer-widgets');
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );
