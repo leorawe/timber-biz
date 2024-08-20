@@ -43,13 +43,12 @@
 									</button>
 									<nav id="mobile-menu" class="page-navigation" role="navigation" aria-label+"Primary Menu">
 										<div class="menu-container">
-											{% include "menu.twig" with {'items': menu.get_items} %}
+											{% include "menu.twig" with {'items': primary.get_items} %}
 										</div>
 									</nav>
 								</div>
 								<nav id="nav-main" class="nav-main" role="navigation">
-									{% include "menu.twig" with {'items': menu.get_items} %}
-									{% include "menu.twig" with {'items': primary_menu.get_items} %}
+									{% include "menu.twig" with {'items': primary.get_items} %}
 								</nav><!-- #nav -->
 								</div>
 						</div>
@@ -68,11 +67,6 @@
 					Sorry, no content
 				{% endblock %}
 			</div>
-			{# {% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %} #}
 			</div>
 		</section>
 

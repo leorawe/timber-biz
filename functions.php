@@ -22,22 +22,13 @@ function timber_biz_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'timber_biz_enqueue_scripts' );
 
-/**
- * Register Menus
- */
-add_action('after_setup_theme', function () {
-    register_nav_menus([
-        'primary' => 'Primary Menu',
-        'footer' => 'Footer Menu',
-    ]);
-});
 
-
-/**
+	/**
 	 * Register widget area.
 	 *
 	 * @link https://codex.wordpress.org/Function_Reference/register_sidebar
 	 */
+	
 	function timber_biz_widgets_init() {
 		register_sidebar( array(
 			'name'          => __( 'Timber Biz Sidebar', 'timber_biz' ),

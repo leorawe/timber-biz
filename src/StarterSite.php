@@ -14,6 +14,15 @@ class StarterSite extends Site {
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_filter( 'timber/twig/environment/options', [ $this, 'update_twig_environment_options' ] );
+		/**
+		 * Register Menus
+		 */
+		add_action('after_setup_theme', function () {
+				register_nav_menus([
+					'primary' => 'Primary Menu',
+					'footer' => 'Footer Menu',
+				]);
+		});
 
 		parent::__construct();
 	}
@@ -41,7 +50,8 @@ class StarterSite extends Site {
 		$context['foo']   = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['menu']  = Timber::get_menu();
+		$context['primary'] = Timber::get_menu('primary');
+		$context['footer'] = Timber::get_menu('footer');
 		$context['site']  = $this;
 
 		return $context;
@@ -110,6 +120,7 @@ class StarterSite extends Site {
 		$text .= ' bar!';
 		return $text;
 	}
+
 
 	/**
 	 * This is where you can add your own functions to twig.

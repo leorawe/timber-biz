@@ -1,19 +1,8 @@
 # Timber Biz Theme started with Timber Starter Theme
 
-[![Build Status](https://travis-ci.com/timber/starter-theme.svg?branch=master)](https://travis-ci.com/github/timber/starter-theme)
-[![Packagist Version](https://img.shields.io/packagist/v/upstatement/timber-starter-theme?include_prereleases)](https://packagist.org/packages/upstatement/timber-starter-theme)
+## Timber Biz Theme Details
 
-The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your SASS files, scripts, and task runners however you would like!
-
-## Installing the theme
-
-Follow the guide on [how to Install Timber using the Starter Theme](https://timber.github.io/docs/v2/installation/installation/#use-the-starter-theme).
-
-Then,
-
-1. Rename the theme folder to something that makes sense for your website. You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
-2. Activate the theme in the WordPress Dashboard under **Appearance → Themes**.
-3. Do your thing! And read [the docs](https://timber.github.io/docs/).
+More here should be written.  
 
 ## The `StarterSite` class
 
