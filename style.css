@@ -291,6 +291,8 @@ h1.article-h1 {
   font-size: 2rem;
 }
 
+/* SEARCH */
+
 .search-container {
   position: relative;
 }
@@ -302,6 +304,17 @@ h1.article-h1 {
   content: "";
   top: 0;
   right: 0;
+}
+
+.widget_search .reset-container {
+  position: absolute;
+  width: 40px;
+  height: 38px;
+  content: "";
+  top: 4px;
+  right: 48px;
+  background-color: #fff;
+  border: none;
 }
 
 .widget_search input#searchbox {

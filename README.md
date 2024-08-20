@@ -2,9 +2,9 @@
 
 ## Timber Biz Theme Details
 
-More here should be written.  
+A simple theme with a header, search results, a dynamic sidebar, a menu in the footer.   
 
-## The `StarterSite` class
+## About Using a `StarterSite` 
 
 In **functions.php**, we call `new StarterSite();`. The `StarterSite` class sits in the **src** folder. You can update this class to add functionality to your theme. This approach is just one example for how you could do it.
 
