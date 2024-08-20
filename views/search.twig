@@ -3,8 +3,9 @@
 
 {% block content %}
   {# see `base.twig:27` for where this block's content will be inserted #}
+  {% if results > 0 %}
   <div class="content-wrapper">
-    <div class="inner-wrapper">
+    <div class="inner-wrapper posts-container">
       {% for post in posts %}
         {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
       {% endfor %}
@@ -16,5 +17,8 @@
 			  <ul>{{sidebar_1}}</ul>
 		  </aside>
   </div>
+  {% else %}
+  <p>Sorry, no results found.</p>
+  {% endif %}
 {% endblock %}
 
