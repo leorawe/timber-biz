@@ -15,6 +15,7 @@ $context          = Timber::context();
 $context['title'] = 'Search results for: ' . get_search_query();
 $context['sidebar_1'] = Timber::get_widgets('sidebar-1');
 $context['posts'] = Timber::get_posts();
+$context['footer_widgets'] = Timber::get_widgets('footer-widgets');
 $context['results'] = count($context['posts']);
 
 Timber::render( $templates, $context );
