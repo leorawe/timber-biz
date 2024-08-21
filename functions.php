@@ -1,6 +1,6 @@
 <?php
 /**
- * Timber starter-theme
+ * Timber Biz based on Timber starter-theme
  * https://github.com/timber/starter-theme
  */
 
@@ -45,5 +45,7 @@ add_action( 'wp_enqueue_scripts', 'timber_biz_enqueue_scripts' );
 	}
 
 	add_action( 'widgets_init', 'timber_biz_widgets_init' );
+
+	add_theme_support( 'customize-selective-refresh-widgets' ); 
 
 new StarterSite();
