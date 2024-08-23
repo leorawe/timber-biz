@@ -15,17 +15,19 @@
 				</section>
 			</article>
 			<hr />
-			{% if post.prev %}
-    	<h3>Previous article</h3>
+			<div class="pagination-container">
+				{% if post.prev %}
+				<h3>Previous article</h3>
 
-			<a href="{{ post.prev.link }}">{{ post.prev.title }}</a>
-		{% endif %}
+				<a href="{{ post.prev.link }}">{{ post.prev.title }}</a>
+				{% endif %}
 
-		{% if post.next %}
-    <h3>Next article</h3>
+				{% if post.next %}
+				<h3>Next article</h3>
 
-    <a href="{{ post.next.link }}">{{ post.next.title }}</a>
-		{% endif %}
+				<a href="{{ post.next.link }}">{{ post.next.title }}</a>
+				{% endif %}
+				</div> <!-- /pagination-container -->
 		</div>
 		<aside class="sidebar">
 			<ul>{{sidebar_1}}</ul>

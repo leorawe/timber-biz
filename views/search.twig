@@ -19,6 +19,9 @@
   </div>
   {% else %}
   <p>Sorry, no results found.</p>
+  <div class="search-container search-short">
+    {% include 'searchform.twig' %}
+  </div>
   {% endif %}
 {% endblock %}
 
