@@ -1,12 +1,12 @@
 {
-  "name": "upstatement/timber-starter-theme",
-  "description": "Starter theme to build a Timber theme",
+  "name": "leoraw/timber-biz",
+  "description": "Timber Biz Wordpress theme",
   "type":"wordpress-theme",
   "license": "MIT",
   "authors": [
     {
-      "email": "jared@upstatement.com",
-      "name": "jarednova"
+      "email": "web@leoraw.com",
+      "name": "leorawe"
     }
   ],
   "repositories": [
@@ -15,28 +15,12 @@
       "url": "https://wpackagist.org"
     }
   ],
-  "require": {
-    "timber/timber": "2.x-dev"
-  },
-  "require-dev": {
-    "automattic/wordbless": "^0.4.2",
-    "yoast/wp-test-utils": "^1.0"
-  },
-  "extra": {
-    "installer-paths": {
-      "vendor/automattic/wordbless/": [
-        "automattic/wordbless"
-      ]
+    "require": {
+        "timber/timber": "^2.0"
     },
-    "wordpress-install-dir": "wordpress"
-  },
-  "config": {
-    "allow-plugins": {
-      "roots/wordpress-core-installer": true,
-      "composer/installers": true
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
-  },
-  "scripts": {
-    "test": "phpunit"
-  }
 }
