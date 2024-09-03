@@ -1,10 +1,10 @@
 <form role="search" method="get" id="searchform" class="searchform" action="{{site.link}}">
+ <input type="reset" value="x" class="reset-container" />
   <div class="search-container">
     <label class="screen-reader-text" for="s">Search for:</label>
     <input type="text" placeholder= "Search" value="{{ function('get_search_query') }}" name="s" id="searchbox" />
     <button type="submit" id="searchsubmit" class="submit-container" />
       <span class="search-icon"></span>   
     </button>
-    <input type="reset" id="searchreset" class="reset-container" value="x" />
   </div>
 </form>

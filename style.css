@@ -333,16 +333,21 @@ article pre {
   right: -7px;
 }
 
-.search-container .reset-container {
+.searchform {
+  position: relative;
+}
+
+.searchform .reset-container {
   position: absolute;
   width: 40px;
   height: 38px;
   content: "";
   top: 4px;
   right: 40px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: none;
-}
+  z-index: 10;
+ }
 
 .search-container input#searchbox {
   height: 40px;
@@ -375,6 +380,15 @@ article pre {
   height: 30px;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='31.511' height='31.693' version='1.1' viewBox='0 0 35 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(187.93 -5.6705)'%3E%3Cg transform='matrix(2.8 0 0 2.8 334.95 -14.07)' stroke='%23000'%3E%3Cellipse cx='-181.2' cy='12.319' rx='3.5886' ry='3.5887' fill='none' stroke-width='.76015'/%3E%3Cpath transform='matrix(.26458 0 0 .26458 -188.11 5.4119)' d='m38.146 34.898c-1.3746 1.0501-2.7484 2.1003-4.123 3.1504 1.1473 1.2448 2.2941 2.4896 3.4414 3.7344l4.0586-3.2207c-1.1256-1.2213-2.2514-2.4428-3.377-3.6641z' stroke-width='1.4912'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.article-body .searchform {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.article-body .searchform  input#searchbox{
+  width: 230px;
 }
 
 .read-more {
@@ -450,6 +464,10 @@ article pre {
   .widget_search input#searchbox {
       width: 230px;
   }
+
+  .article-body .searchform input#searchbox {
+      width: 500px;
+    }
 
   .widget_search .submit-container {
     right: 0;
